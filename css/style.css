@@ -1,0 +1,97 @@
+/* teenage engineering — custom theme layered on Bootstrap 5
+   Loaded AFTER bootstrap.min.css so these rules win. */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+  --te-ink:#1a1a1a;
+  --te-accent:#ff5500;
+  --te-bg:#fbfbfb;
+  --te-mono:'Space Mono', monospace;
+  --te-sans:'Archivo', sans-serif;
+}
+
+body{
+  background:var(--te-bg);
+  color:var(--te-ink);
+  font-family:var(--te-sans);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* page frame (keeps the bordered container look) */
+.te-frame{
+  max-width:1040px;
+  margin:0 auto;
+  border-left:1px solid var(--te-ink);
+  border-right:1px solid var(--te-ink);
+  background:#fff;
+}
+
+/* ---------- typography ---------- */
+h1,h2,h3,.navbar-brand{text-transform:lowercase;letter-spacing:-1px;font-weight:900}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.02}
+h2{font-size:clamp(24px,4vw,34px)}
+h3{font-size:16px;font-weight:700;letter-spacing:0}
+.te-eyebrow{font-family:var(--te-mono);font-size:12px;color:var(--te-accent);text-transform:lowercase;letter-spacing:1px}
+.te-lede{font-size:18px;color:#777;max-width:620px;margin:0 auto}
+.text-muted-te{color:#777}
+
+/* ---------- navbar ---------- */
+.navbar{border-bottom:1px solid var(--te-ink);padding:.9rem 1.5rem}
+.navbar-brand{display:flex;align-items:center;gap:10px;font-family:var(--te-mono);font-size:15px}
+.navbar-brand img{width:34px;height:34px}
+.navbar .nav-link{
+  font-family:var(--te-mono);font-size:13px;text-transform:lowercase;color:var(--te-ink);
+  border-bottom:2px solid transparent;padding-bottom:2px;margin-left:1rem;
+}
+.navbar .nav-link:hover,.navbar .nav-link.active{color:var(--te-ink);border-bottom-color:var(--te-accent)}
+
+/* ---------- buttons ---------- */
+.btn-te{
+  font-family:var(--te-mono);font-size:13px;font-weight:700;text-transform:lowercase;
+  background:var(--te-ink);color:#fff;border:1px solid var(--te-ink);border-radius:0;
+  padding:.85rem 2.2rem;transition:.15s ease;
+}
+.btn-te:hover{background:var(--te-accent);border-color:var(--te-accent);color:#fff}
+.btn-te-ghost{
+  font-family:var(--te-mono);font-size:13px;font-weight:700;text-transform:lowercase;
+  background:#fff;color:var(--te-ink);border:1px solid var(--te-ink);border-radius:0;
+  padding:.85rem 2.2rem;transition:.15s ease;
+}
+.btn-te-ghost:hover{background:var(--te-accent);border-color:var(--te-accent);color:#fff}
+
+/* ---------- sections ---------- */
+.te-section{padding:54px 28px;border-bottom:1px solid var(--te-ink)}
+
+/* ---------- hero ---------- */
+.te-hero{border-bottom:1px solid var(--te-ink);background:#ececec}
+.te-hero img{width:100%;display:block}
+
+/* ---------- cards ---------- */
+.te-card{border:1px solid var(--te-ink);border-radius:0;height:100%}
+.te-card img{width:100%;display:block;border-bottom:1px solid var(--te-ink)}
+.te-card .price{font-family:var(--te-mono);font-size:13px}
+
+/* ---------- forms ---------- */
+.te-input{
+  font-family:var(--te-mono);font-size:14px;border:1px solid var(--te-ink);border-radius:0;
+  padding:.85rem 1rem;
+}
+.te-input:focus{outline:2px solid var(--te-accent);outline-offset:-2px;box-shadow:none;border-color:var(--te-ink)}
+.te-img-box{border:1px solid var(--te-ink)}
+.te-img-box img{width:100%;display:block}
+
+/* ---------- about extras ---------- */
+.te-split img{width:100%;border:1px solid var(--te-ink)}
+.te-stat .n{font-family:var(--te-mono);font-weight:700;font-size:30px;color:var(--te-accent)}
+.te-stat .l{font-family:var(--te-mono);font-size:12px;color:#777;text-transform:lowercase}
+ul.te-list{list-style:none;padding:0;margin:1rem 0 0}
+ul.te-list li{font-family:var(--te-mono);font-size:14px;padding-left:22px;position:relative;margin-bottom:8px}
+ul.te-list li::before{content:"\2192";position:absolute;left:0;color:var(--te-accent)}
+
+/* ---------- footer ---------- */
+.te-footer{padding:46px 28px;text-align:center}
+.te-footer .brand{font-family:var(--te-mono);font-weight:700;font-size:18px;text-transform:lowercase;margin-bottom:.6rem}
+.te-footer p{font-size:13px;color:#777}
+.te-footer a{font-family:var(--te-mono);font-size:12px;color:#777;text-decoration:none;text-transform:lowercase;margin:0 10px}
+.te-footer a:hover{color:var(--te-accent)}
